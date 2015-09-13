@@ -1,6 +1,6 @@
 hpc <- read.csv("hpc.txt",sep=";")
 index <- which(hpc[,1] == "2/2/2007")
 plot(hpc[,3], xlab = "", ylab = "Global_active_power (kilowatts)", type = "l", xaxt = "n")
-axis(1, at= c("0",as.character(index[1]),"2880"), labels = c("Thu","Fri","Sat"), xlab = "")
+axis(1, at= c("0",as.character(index[1]),"2880"), labels = c("Thu","Fri","Sat"), xlab = "", pch = 8)
 dev.copy(png, file = "plot2.png",width = 480, height = 480)
 dev.off()
